@@ -1,0 +1,11 @@
+filename = input("Enter a filename: ")
+# Read scores from the file
+with open(filename, 'r') as file:
+  scores = list(map(int, file.read().split()))
+# Calculate total and average
+total = sum(scores)
+average = total / len(scores)
+# Display the results
+print("There are", len(scores), "scores")
+print("The total is", total)
+print("The average is", ‘{:.2f}'.format(average))
